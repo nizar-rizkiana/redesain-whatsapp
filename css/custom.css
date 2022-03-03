@@ -1,0 +1,43 @@
+.list-avatar{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.background{
+	background-color: #075e54;
+}
+.tabbar{
+	background-color: #075e54;
+}
+.tabbar__label, .tabbar__icon{
+	color: white;
+}
+.notification{
+	background-color: #25d366;
+	width: 4;
+	height: 4;
+	border-radius: 50%;
+	color: white;
+	font-size: 12px;
+}
+.list-status{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	padding: 2px;
+	border: 2px dashed #075e54;
+}
+.list-status-viewed{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	padding: 2px;
+	border: 2px dashed grey;
+}
+.text-default{
+	color: #075e54;
+}
+.popover.popover--material.popover--top{
+	top: 6px;
+	left: 190px;
+}

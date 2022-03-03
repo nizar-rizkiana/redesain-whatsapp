@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="https://github.com/nizar-rizkiana">
+		<link rel="stylesheet" href="css/onsenui.min.css">
+		<link rel="stylesheet" href="css/onsen-css-components.min.css">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/custom.css">
+		<title>WhatsApp - Redesain by Nizar</title>
+	</head>
+	<body>
+		
+		<header style="background-color:#075e54;">
+			
+			<ons-page>
+			<ons-toolbar style="background-color: #075e54;">
+			<div class="center">
+				<div class="text-white fw-bold">WhatsApp</div>
+			</div>
+			<div class="right">
+				<span class="toolbar-button toolbar-button--material">
+					<i class="zmdi zmdi-search text-white"></i>
+				</span>
+				<span id="info-button" class="toolbar-button toolbar-button--material" onclick="fn.showDialog('popover-dialog')">
+					<i class="zmdi zmdi-more-vert text-white"></i>
+				</span>
+				<!-- <ons-toolbar-button id="info-button" onclick="fn.showDialog('popover-dialog')"></ons-toolbar-button> -->
+			</div>
+			</ons-toolbar>
+			
+			<ons-tabbar swipeable id="appTabbar" position="auto" modifier="autogrow">
+			<ons-tab icon="ion-ios-camera" page="camera.html" style="font-size: 32px;"></ons-tab>
+			<ons-tab label="Chats"  page="chat.html" active></ons-tab>
+			<ons-tab label="Status" page="status.html"></ons-tab>
+			<ons-tab label="Calls"  page="call.html"></ons-tab>
+			</ons-tabbar>
+			</ons-page>
+		</header>
+		<ons-popover id="popover-dialog" cancelable direction="down" cover-target target="#info-button">
+		<ons-list id="popover-list">
+		<ons-list-item class="more-options" tappable onclick="fn.hideDialog('popover-dialog')">
+		<div class="center">Grup baru</div>
+		</ons-list-item>
+		<ons-list-item class="more-options" tappable onclick="fn.hideDialog('popover-dialog')">
+		<div class="center">Siaran baru</div>
+		</ons-list-item>
+		<ons-list-item class="more-options" tappable onclick="fn.hideDialog('popover-dialog')">
+		<div class="center">Perangkat tertaut</div>
+		</ons-list-item>
+		<ons-list-item class="more-options" tappable onclick="fn.hideDialog('popover-dialog')">
+		<div class="center">Pesan berbintang</div>
+		</ons-list-item>
+		<ons-list-item class="more-options" tappable onclick="fn.hideDialog('popover-dialog')">
+		<div class="center">Setelan</div>
+		</ons-list-item>
+		</ons-list>
+		</ons-popover>
+		<template id="chat.html">
+		<ons-page>
+		<ul class="list">
+			<li class="list-item" onclick="fn.pushPage({'id': 'dialogs.html', 'title': 'Dialogs'})">
+				<div class="list-item__left">
+					<img class="list-avatar" src="image/avatar.png" alt="avatar">
+				</div>
+				<div class="list-item__center">
+					<div class="list-item__title fw-bold mb-1">Philip</div>
+					<div class="list-item__subtitle"><i class="fas fa-check"></i> &nbsp; Lorem ipsum dolor, consectetur.</div>
+				</div>
+				<div class="list-item__right">
+					<small class="text-muted">13.22</small>
+				</div>
+			</li>
+			<li class="list-item">
+				<div class="list-item__left">
+					<img class="list-avatar" src="image/default-avatar.png" alt="avatar">
+				</div>
+				<div class="list-item__center">
+					<div class="list-item__title fw-bold mb-1">Molly</div>
+					<div class="list-item__subtitle"><i class="fas fa-check-double text-primary"></i>&nbsp; Loves tuna!</div>
+				</div>
+				<div class="list-item__right">
+					<small class="text-muted">12.12</small>
+				</div>
+			</li>
+			<li class="list-item">
+				<div class="list-item__left">
+					<img class="list-avatar" src="image/avatar1.png" alt="avatar">
+				</div>
+				<div class="list-item__center">
+					<div class="list-item__title fw-bold mb-1">David</div>
+					<div class="list-item__subtitle"> Lorem, ipsum dolor sit.</div>
+				</div>
+				<div class="list-item__right text-center d-block">
+					<small class="text-muted text-success">21.14</small>
+					<br>
+					<small class="notification">2</small>
+				</div>
+			</li>
+			<li class="list-item">
+				<div class="list-item__left">
+					<img class="list-avatar" src="image/avatar4.png" alt="avatar">
+				</div>
+				<div class="list-item__center">
+					<div class="list-item__title fw-bold mb-1">Jhon</div>
+					<div class="list-item__subtitle"><i class="fas fa-check"></i> &nbsp; Lorem ipsum dolor, consectetur.</div>
+				</div>
+				<div class="list-item__right">
+					<small class="text-muted">21/01/22</small>
+				</div>
+			</li>
+			<li class="list-item">
+				<div class="list-item__left">
+					<img class="list-avatar" src="image/avatar2.png" alt="avatar">
+				</div>
+				<div class="list-item__center">
+					<div class="list-item__title fw-bold mb-1">Letty</div>
+					<div class="list-item__subtitle"><i class="fas fa-check-double text-primary"></i>&nbsp; Loves tuna!</div>
+				</div>
+				<div class="list-item__right">
+					<small class="text-muted">17.12</small>
+				</div>
+			</li>
+			<li class="list-item">
+				<div class="list-item__left">
+					<img class="list-avatar" src="image/avatar3.png" alt="avatar">
+				</div>
+				<div class="list-item__center">
+					<div class="list-item__title fw-bold mb-1">Natasha</div>
+					<div class="list-item__subtitle"> Lorem, ipsum dolor sit.</div>
+				</div>
+				<div class="list-item__right d-block text-center">
+					<small class="text-muted text-success">17.14</small><br>
+					<small class="notification">4</small>
+				</div>
+			</li>
+			<li class="list-item">
+				<div class="list-item__left">
+					<img class="list-avatar" src="image/avatar4.png" alt="avatar">
+				</div>
+				<div class="list-item__center">
+					<div class="list-item__title fw-bold mb-1">Michele</div>
+					<div class="list-item__subtitle"><i class="fas fa-check"></i> &nbsp; Lorem ipsum dolor, consectetur.</div>
+				</div>
+				<div class="list-item__right">
+					<small class="text-muted">20.22</small>
+				</div>
+			</li>
+			<li class="list-item">
+				<div class="list-item__left">
+					<img class="list-avatar" src="image/avatar5.png" alt="avatar">
+				</div>
+				<div class="list-item__center">
+					<div class="list-item__title fw-bold mb-1">Robert</div>
+					<div class="list-item__subtitle"><i class="fas fa-check-double text-primary"></i>&nbsp; Loves tuna!</div>
+				</div>
+				<div class="list-item__right">
+					<small class="text-muted">16.12</small>
+				</div>
+			</li>
+			<li class="list-item">
+				<div class="list-item__left">
+					<img class="list-avatar" src="image/avatar.png" alt="avatar">
+				</div>
+				<div class="list-item__center">
+					<div class="list-item__title fw-bold mb-1">David</div>
+					<div class="list-item__subtitle"> Lorem, ipsum dolor sit.</div>
+				</div>
+				<div class="list-item__right">
+					<small class="text-muted">14.14</small>
+				</div>
+			</li>
+		</ul>
+		<ons-fab position="bottom right" class="text-white" style="background-color: #25d366;">
+		<ons-icon icon="md-comment"></ons-icon>
+		</ons-fab>
+		</ons-page>
+		</template>
+		<script src="js/onsenui.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
